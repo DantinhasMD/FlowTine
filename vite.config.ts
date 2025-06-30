@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 
 export default defineConfig({
-  base: '/Flowtine',
+  base: '/Flowtine/',
   plugins: [
     vue(),
     VitePWA({
