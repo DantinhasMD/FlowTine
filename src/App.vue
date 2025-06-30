@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { format } from 'date-fns'
 import { Menu, X } from 'lucide-vue-next'
@@ -110,7 +110,8 @@ const closeDailyModal = () => {
 }
 
 const dismissReminder = (id: string) => {
-  // Implementar lógica para dispensar lembrete
+console.log('Lembrete a ser descartado:', id);
+  // TODO: Implementar lógica para dispensar lembrete
 }
 
 const formatTime = (dateString: string) => {

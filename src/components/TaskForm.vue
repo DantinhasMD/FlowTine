@@ -164,7 +164,9 @@ const form = reactive({
   priority: 'medium' as Task['priority'],
   effort: 'medium' as Task['effort'],
   groupId: undefined as string | undefined, 
-  status: 'todo' as Task['status']
+  status: 'todo' as Task['status'],
+  group: '',        
+  customGroup: '',  
 })
 
 watch(() => props.editingTask, (task) => {

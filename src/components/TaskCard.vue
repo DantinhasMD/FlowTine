@@ -41,7 +41,7 @@
     
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <GroupBadge :group-id="task.groupId" />
+        <GroupBadge :group-id="task.groupId || ''" />
         <TypeBadge :type="task.type" />
         <span 
           :class="effortClasses()" 

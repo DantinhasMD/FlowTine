@@ -149,11 +149,9 @@
 <script setup lang="ts">
 import { reactive, computed, onMounted } from 'vue'
 import { useAuthStore } from '../stores/auth'
-import { useTasksStore } from '../stores/tasks'
 import { useChatbotStore } from '../stores/chatbot'
 
 const authStore = useAuthStore()
-const tasksStore = useTasksStore()
 const chatbotStore = useChatbotStore()
 
 const profileForm = reactive({
@@ -180,7 +178,9 @@ const updateProfile = () => {
   }
 }
 
-const updateOrganizationMethod = (methodId: string) => {
+type OrganizationMethod = 'gtd' | 'timeblocking' | 'cyclical' | 'eisenhower'
+
+const updateOrganizationMethod = (methodId: OrganizationMethod) => {
   authStore.updatePreferences({ organizationMethod: methodId })
   chatbotStore.setOrganizationMethod(methodId)
 }

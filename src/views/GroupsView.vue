@@ -161,7 +161,7 @@ import { Users, X } from 'lucide-vue-next'
 import { useTasksStore } from '../stores/tasks'
 import TaskCard from '../components/TaskCard.vue'
 import GroupForm from '../components/GroupForm.vue'
-import type { Task, TaskGroup } from '../stores/tasks'
+import type { Task } from '../stores/tasks'
 
 const tasksStore = useTasksStore()
 
